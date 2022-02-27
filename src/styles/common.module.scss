@@ -1,1 +1,43 @@
-// TODO
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 1120px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerHeader {
+  width: 50%;
+}
+
+.content {
+  width: 50%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+
+    time,
+    span {
+      color: var(--gray-x11);
+    }
+  }
+
+  div + div {
+    margin-left: 1rem;
+  }
+}

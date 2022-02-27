@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { RouterContext } from 'next/dist/next-server/lib/router-context';
 
-import Header from '../../components/Header';
+import { Header } from '../../components/Header';
 
 const mockedPush = jest.fn();
 let RouterWrapper;
@@ -24,13 +24,13 @@ describe('Header', () => {
   });
 
   it('should be able to render logo', () => {
-    render(<Header />);
+    render(<Header pageTitle="Home" />);
 
     screen.getByAltText('logo');
   });
 
   it('should be able to navigate to home page after a click', () => {
-    render(<Header />, {
+    render(<Header pageTitle="Home" />, {
       wrapper: RouterWrapper,
     });
 
